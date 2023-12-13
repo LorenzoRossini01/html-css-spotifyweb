@@ -320,14 +320,39 @@ body {
 }
 
 #app-player .container {
+  height: 100%;
   display: flex;
   justify-content: space-between;
 }
 
+/* player left */
 #app-player .player-left {
   display: flex;
   align-items: center;
+  gap: 1.5rem;
+  padding-left: 0.5rem;
 }
+
+.player-left .currently-playing {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.player-left img {
+  width: 3rem;
+}
+
+.player-left .function-icons {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--sidebar-font-color);
+}
+
+/* player middle */
+
+/* player right */
 
 /* MEDIA 878px */
 
