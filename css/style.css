@@ -354,6 +354,35 @@ body {
 
 /* player right */
 
+#app-player .player-right {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  padding-right: 0.5rem;
+  color: #afafaf;
+}
+
+.volume-settings {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.volume-bar .progress-bar-time-left,
+.volume-bar .progress-bar-time-in {
+  height: 5px;
+  border-radius: 2.5px;
+}
+
+.volume-bar .progress-bar-time-left {
+  width: 100px;
+  background-color: #5a5a5a;
+}
+.volume-bar .progress-bar-time-in {
+  width: 25%;
+  background-color: #afafaf;
+}
+
 /* MEDIA 878px */
 
 @media screen and (max-width: 878px) {
