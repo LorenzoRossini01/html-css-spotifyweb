@@ -10,8 +10,10 @@
 
   /* layout */
   --sidebar-width: 250px;
-  --main-top-bar-height: 100px;
+  --main-top-bar-height: 80px;
   --player-height: 120px;
+
+  --grid-spacing: 1rem;
 }
 
 /* RESET */
@@ -41,11 +43,11 @@ a {
 
 /* GRID */
 .container {
-  width: 100%;
+  max-width: 100%;
   margin-left: auto;
   margin-right: auto;
-  padding-left: 1rem;
-  padding-right: 1rem;
+  padding-left: var(--grid-spacing);
+  padding-right: var(--grid-spacing);
 }
 
 .row {
@@ -53,14 +55,14 @@ a {
   flex-direction: row;
   flex-wrap: wrap;
   padding-top: 1.5rem;
-  margin-left: -1rem;
-  margin-right: -1rem;
+  margin-left: calc(-1 * var(--grid-spacing));
+  margin-right: calc(-1 * var(--grid-spacing));
 }
 
 .col-1-6 {
   width: calc(100% / 6);
-  padding-left: 1rem;
-  padding-right: 1rem;
+  padding-left: var(--grid-spacing);
+  padding-right: var(--grid-spacing);
 }
 
 /* UTILS */
@@ -198,7 +200,7 @@ body {
 #main-top-bar {
   height: var(--main-top-bar-height);
   width: calc(100% - var(--sidebar-width));
-  background-color: rgba(0, 0, 0, 0.2);
+  background-color: rgba(0, 0, 0, 0.3);
   position: fixed;
   top: 0;
   right: 0;
@@ -271,11 +273,21 @@ body {
 /* MEDIA 878px */
 
 @media screen and (max-width: 878px) {
+  :root {
+    --grid-spacing: 0.5rem;
+  }
+
+  .col-1-6 {
+    width: calc(100% / 4);
+  }
 }
 
 /* MEDIA 639px */
 
 @media screen and (max-width: 639px) {
+  .col-1-6 {
+    width: calc(100% / 2);
+  }
 }
 
 /* MEDIA 552px */
