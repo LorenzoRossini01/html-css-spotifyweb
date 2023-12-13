@@ -73,7 +73,7 @@ body {
   height: calc(100vh - var(--player-height));
   display: flex;
   flex-direction: column;
-  overflow: scroll;
+  overflow: auto;
 }
 
 .logo {
@@ -187,6 +187,28 @@ body {
   overflow: auto;
 }
 
+/* TOP BAR */
+#main-top-bar .container {
+  width: 100%;
+  height: var(--main-top-bar-height);
+  padding: 1rem;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+#main-top-bar #upgrade {
+  font-size: 0.7rem;
+  font-weight: 700;
+  border: 2px solid currentColor;
+  width: fit-content;
+  padding: 0.5rem 1.5rem;
+  border-radius: 1.25rem;
+}
+
+#main-top-bar #upgrade:hover {
+  font-size: 0.8rem;
+}
 /* APP PLAYER */
 #app-player {
   background-color: var(--player-bg-color);
@@ -210,6 +232,7 @@ body {
     --sidebar-width: 50px;
   }
 
+  /* SIDEBAR */
   #sidebar .container {
     width: 100%;
     padding: 0.5rem;
@@ -252,4 +275,6 @@ body {
   #sidebar .profile-details {
     border-top: none;
   }
+
+  /* TOP BAR */
 }
