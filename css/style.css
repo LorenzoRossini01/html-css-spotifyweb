@@ -39,6 +39,30 @@ a {
   text-decoration: none;
 }
 
+/* GRID */
+.container {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding-top: 1.5rem;
+  margin-left: -1rem;
+  margin-right: -1rem;
+}
+
+.col-1-6 {
+  width: calc(100% / 6);
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
 /* UTILS */
 
 .debug {
@@ -61,7 +85,7 @@ body {
 /* sidebar */
 
 #sidebar {
-  width: var(--sidebar-width);
+  min-width: var(--sidebar-width);
   background-color: var(--sidebar-bg-color);
   color: var(--sidebar-font-color);
   font-weight: bold;
@@ -181,10 +205,10 @@ body {
 }
 
 #main-content {
-  height: calc(100%);
+  height: 100%;
   padding-top: var(--main-top-bar-height);
 
-  overflow: auto;
+  overflow-y: auto;
 }
 
 /* TOP BAR */
@@ -209,6 +233,35 @@ body {
 #main-top-bar #upgrade:hover {
   font-size: 0.8rem;
 }
+
+/* MAIN CONTENT */
+#main-content .container {
+  margin: 1rem;
+}
+
+#main-content ul {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  color: var(--sidebar-font-color-selected);
+  padding-bottom: 2rem;
+}
+
+.album-card {
+}
+
+.album-card .album-details {
+  text-align: center;
+  font-size: 0.7rem;
+}
+.album-card .album-details h3 {
+  padding: 0.2rem 0 0.5rem;
+}
+
+.album-card .album-details p {
+  color: var(--sidebar-font-color-selected);
+}
+
 /* APP PLAYER */
 #app-player {
   background-color: var(--player-bg-color);
