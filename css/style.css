@@ -160,6 +160,9 @@ body {
 
 .profile .profile-details img {
   height: 2rem;
+  width: 2rem;
+  background-color: var(--sidebar-font-color);
+  border-radius: 50%;
 }
 
 /* end sidebar */
@@ -233,5 +236,20 @@ body {
 
   #sidebar li {
     justify-content: center;
+  }
+
+  #sidebar .playlist-header,
+  #sidebar .playlist,
+  #sidebar .download span,
+  #sidebar .profile-details h2 {
+    display: none;
+  }
+
+  #sidebar .download,
+  #sidebar .profile-details {
+    justify-content: center;
+  }
+  #sidebar .profile-details {
+    border-top: none;
   }
 }
