@@ -11,7 +11,7 @@
   /* layout */
   --sidebar-width: 250px;
   --main-top-bar-height: 80px;
-  --player-height: 120px;
+  --player-height: 100px;
 
   --grid-spacing: 0.25rem;
 }
@@ -74,9 +74,10 @@ p {
 /* UTILS */
 
 .debug {
-  min-height: 80px;
-  background-color: lightgray;
-  padding: 2rem;
+  min-height: 100%;
+  background-color: rgba(211, 211, 211, 0.491);
+  border: 2px dashed red;
+  padding: 1rem;
 }
 
 body {
@@ -316,6 +317,16 @@ body {
 #app-player {
   background-color: var(--player-bg-color);
   height: var(--player-height);
+}
+
+#app-player .container {
+  display: flex;
+  justify-content: space-between;
+}
+
+#app-player .player-left {
+  display: flex;
+  align-items: center;
 }
 
 /* MEDIA 878px */
