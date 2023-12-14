@@ -121,6 +121,7 @@ body {
   display: flex;
   flex-direction: column;
   overflow: auto;
+  position: relative;
 }
 
 .logo {
@@ -135,6 +136,14 @@ body {
 
 #sidebar .menu {
   padding-top: 1.5rem;
+}
+
+#sidebar .sidebar-menu-marker {
+  height: 2.2rem;
+  width: 3px;
+  background-color: var(--active-link);
+  position: absolute;
+  left: 0;
 }
 
 #sidebar li {
@@ -290,6 +299,20 @@ body {
   font-weight: 600;
   gap: 2rem;
   color: var(--sidebar-font-color-selected);
+}
+
+#main-content li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3px;
+}
+
+#main-content .nav-menu-marker {
+  width: 1.5rem;
+  height: 2px;
+  background-color: var(--active-link);
+  display: inline-block;
 }
 
 .choose-album {
